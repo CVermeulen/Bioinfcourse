@@ -1,0 +1,39 @@
+var position=200;//Yposition
+var Xposition1=100;
+var value1=50;
+var SD1=30;
+var Xposition2=132;
+var value2=-100;
+var SD2=50;
+var columnW=25;
+
+strokeWeight(2);//XandY
+line(50,position-50,50,399-position);
+line(50,400-position,350,400-position);
+
+fill(12, 96, 240);//Bar1
+if (value1>0){
+rect(Xposition1,400-position,columnW,-1*value1);//Bar1
+
+line(Xposition1+columnW/2,399-position+-1*value1,Xposition1+columnW/2,399-position+-1*value1-SD1);
+line(Xposition1,399-position+-1*value1-SD1,Xposition1+columnW,399-position+-1*value1-SD1);}
+
+
+else { rect(Xposition1,400-position-value1,columnW,value1);
+    line(Xposition1+columnW/2,400-position-value1,Xposition1+columnW/2,400-position-value1+SD1-1);
+    line(Xposition1,400-position-value1+SD1,Xposition1+columnW,400-position-value1+SD1);
+}
+
+
+
+fill(75, 173, 37);
+if (value2>0){
+rect(Xposition2,400-position,columnW,50-value2);
+line(Xposition2+columnW/2,399-position+50-value2,Xposition2+columnW/2,400-position+50-value2-SD2);
+line(Xposition2,400-position+50-value2-SD2,Xposition2+columnW,400-position+50-value2-SD2);}
+else {rect(Xposition2,400-position-value2,columnW,value2);
+    line(Xposition2+columnW/2,400-position-value2,Xposition2+columnW/2,400-position-value2+SD2-1);
+    line(Xposition2,400-position-value2+SD2,Xposition2+columnW,400-position-value2+SD2);
+    
+}
+
